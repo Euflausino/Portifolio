@@ -1,341 +1,272 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-    <link rel="shortcut icon" type="x-icon" href="assets/logoup.png">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="media.css" />
-  </head>
-  <body>
-      <nav id="desktop-nav">
-        <div class="logo">Bruno Euflausino</div>
-        <div class="hdr">
-          <ul class="nav-links">
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#experience">Experiência</a></li>
-            <li><a href="#projects">Projetos</a></li>
-            <li><a href="#contact">Contato</a></li>
-          </ul>
-        </div>
-      </nav>
-      <nav id="hamburger-nav">
-        <div class="logo">Bruno Euflausino</div>
-        <div class="hamburger-menu">
-          <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="menu-links">
-            <li><a href="#about" onclick="toggleMenu()">Sobre</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Experiencia</a></li>
-            <li><a href="#projects" onclick="toggleMenu()">Projetos</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contato</a></li>
-          </div>
-        </div>
-      </nav>   
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/icone.png" alt="fotodeperfil" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">OLá, eu sou o</p>
-        <h1 class="title">Bruno Euflausino</h1>
-        <p class="section__text__p2">Desenvolvedor Frontend</p>
-        <div class="btn-container">
-          <button class="btn btn-color-1" onclick="location.href='#contact'">
-            Informações de Contato
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/bruno-euflausino-597b912a7/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/Euflausino'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Saiba mais</p>
-      <h1 class="title">Sobre mim</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/business.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experiência</h3>
-              <p>1+ ano <br />Desenvolvedor Frontend</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Educação</h3>
-              <p>Tecnico em Análise e desenvolvimento de sistemas<br />ETEC Raposo Tavares</p>
-            </div>
-          </div>
-          <div class="text-container">
-            <p>
-              Olá, me chamo Bruno Euflausino Braga Ramos, tenho 18 anos e entrei na área da tecnologia aos 16. Comecei trabalhando com programação de Arduino,
-              aprimorando minhas habilidades e exercitando
-              a minha lógica de programação, hoje expandi
-              meus horizontes, mudando para a área do Frontend
-              onde trabalho como freelancer a mais de 1 ano.
-            </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Conheça minha</p>
-      <h1 class="title">Experiência</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                 
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  
-                </div>
-              </article>
-              
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  
-                </div>
-              </article>
-              
-              
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MySql</h3>
-                 
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PHP</h3>
-                  
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Firebase</h3>
-                 
-                </div>
-              </article>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Conheça meus</p>
-      <h1 class="title">Projetos</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-              src="./assets/link.png"
-              alt="Project 2"
-              class="project-img"
-            /> 
-            </div>
-            <h2 class="experience-sub-title project-title">Meus Links</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno E.</title>
+    <link rel="shortcut icon" type="x-icon" href="imgs/pessoaa.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="ri-code-s-slash-line nav__logo-icon"></i>Bruno Euflausino
+            </a>
 
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Euflausino/Links'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://links-eight-iota.vercel.app/'"
-              >
-                Live Demo
-              </button>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">Início</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Sobre</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#project"  class="nav__link">Projeto</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Contatos</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
             </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/diar.png"
-                alt="Project 2"
-                class="project-img"
-              />
+
+            <div class="nav__btns">
+                <!-- DARK MODE -->
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
             </div>
-            <h2 class="experience-sub-title project-title">Projeto DIAR</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/Euflausino/Diar'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://diar-eight.vercel.app/'"
-              >
-                Live Demo
-              </button>
+            
+        </nav>
+
+    </header>
+
+    <main class="main">
+        <section class="home" id="home">
+            <div class="home__container container grid">
+                <img src="imgs/business.png" alt="" class="home__img">
+                <div class="home__data">
+                    <h1 class="home__title">
+                        Olá, eu sou <br><span class="diar">Bruno Euflausino</span>
+                    </h1>
+                    <p class="home__description">
+                        Desenvolvedor Frontend
+                    </p>
+                    <a href="#about" class="button button--flex">Mais aqui <i class="ri-arrow-right-down-line button__icon"></i></a>
+                </div>
+                <div class="home__social">
+                    <span class="home__social-follow">Contato</span>
+                    <div class="home__social-links">
+                        <a href="https://github.com/Euflausino" class="home__social-link" target="_blank"><i class="ri-github-fill"></i></a>
+                        <a href="https://www.linkedin.com/in/bruno-euflausino-597b912a7/" class="home__social-link" target="_blank"><i class="ri-linkedin-fill"></i></a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-             
+            <div class="vaga"></div>
+        </section>
+
+<!-- ================================================SOBRE=============================================== -->
+
+        <section class="about section containeir" id="about">
+
+            <div class="about__container grid">
+                <img src="imgs/pessoas.png" alt="" class="about__img">
+
+                <div class="about_data">
+                    <h2 class="section__title about__title">
+                        Sobre mim
+                    </h2>
+                    <p class="about__description">Olá, sou o Bruno Euflausino.<br> Tecnico em Análise
+                         e Desenvolvimento de Sistemas pela ETEC Raposo Tavares. Tenho 18 anos.<br>
+                        Entrei na área da tecnologia aos 16, comecei trabalhei com programação de
+                        Arduino,<br>
+                        aprimorando minhas habilidades e
+                        exercitando
+                        a minha lógica de programação,<br> hoje
+                        expandi
+                        meus horizontes, mudando para a área
+                        do Frontend<br>
+                        onde trabalho como freelancer a mais de
+                        1 ano.
+                    </p>
+                    <div class="about__details">
+                        <h2 class="section__title about__title">
+                            Experiência
+                        </h2>
+                        <p class="about__details-description">
+                            <i class="ri-javascript-fill about__details-icon"></i>
+                            JavaScript;
+                        </p>
+                        <p class="about__details-description">
+                            <i class="ri-css3-fill about__details-icon"></i>
+                            CSS;
+                        </p>
+                        <p class="about__details-description">
+                            <i class="ri-html5-fill about__details-icon"></i>
+                            HTML;
+                        </p>
+                        <p class="about__details-description">
+                            <i class="ri-database-fill about__details-icon"></i>
+                            PHP;
+                        </p>
+                        <p class="about__details-description">
+                            <i class="ri-database-2-fill about__details-icon"></i>
+                           MySql.
+                        </p>
+                    </div>
+                    <a href="#contact" class="button--link button--flex ">
+                        Contato <i class="ri-arrow-down-line button__icon"></i>
+                    </a>
+                </div>
+                <div class="vaga"></div>
             </div>
-            <h2 class="experience-sub-title project-title">Projeto em Desenvolvimento</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href=''"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href=''"
-              >
-                Live Demo
-              </button>
+
+        </section>
+<!-- ========================================PROJETOS============================================ -->
+        <section class="product section container" id="project">
+            <h2 class="section__title-center">
+                Projetos
+            </h2>
+
+            <p class="product__description">
+                Estas foram projetos desenvolvidos por mim ao longo da minha carreira.
+            </p>
+            <div class="product__container ">
+
+                <div class="card card1">  
+                    <img src="./imgs/diar.png" alt="">
+                    <h1> DIAR </h1>
+                    <p> Projeto DIAR (Dispositivo Irrigatorio Automático) desenvolvido por mim e minha equipe.</p>
+                        <button class="bnt"> Ver mais</button>
+                        
+                </div>
+                <div class="card card2">  
+                    <img src="./imgs/links.png" alt="">
+                    <h1> Links</h1>
+                    <p>Página de links desenvolvida para facilitar o contato.</p><br>
+                    <button class="bnt"> Ver mais</button>
+                    
+                </div>
+                
+    
+                    
+
+                                              
+
+               
+                
+
+                
+               
             </div>
-          </div>
+            <div class="vaga"></div>
+
+           
+        </section>
+        <!-- =========================CONTATOS==================================== -->
+        <section class="contact section container" id="contact">
+            <div class="contact__container grid">
+                <div class="contact__box">
+                    <h2 class="section__title">Contato</h2>
+                    <div class="contact__data">
+                        <div class="contact__information">
+                            <h3 class="contact__subtitle">
+                                Sociais:
+                            </h3>
+                            <span class="contact__description">
+                                <a href="https://github.com/Euflausino" class="home__social-link" target="_blank"><i class="ri-github-fill">&nbsp;&nbsp;Github </i></a>
+                            </span>
+                            <br>
+                            <span class="contact__description">
+                                <a href="https://www.linkedin.com/in/bruno-euflausino-597b912a7/" class="home__social-link" target="_blank"><i class="ri-linkedin-fill">&nbsp;&nbsp;Linkedin</i></a>
+                            </span>
+                            <br>
+                            <span class="contact__description">
+                                <a href="https://www.instagram.com/obrunoeuflausino/" class="home__social-link" target="_blank"><i class="ri-instagram-fill">&nbsp;&nbsp;Instagram</i></a>
+                            </span>
+                        </div>
+
+                        <div class="contact__information">
+                            <h3 class="contact__subtitle">
+                                Envie uma mensagem para meu email:
+                            </h3>
+                            <span class="contact__description">
+                                <i class="ri-mail-send-fill contact__icon"></i>
+                                brunoeuflausino@gmail.com
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <form action="https://formsubmit.co/brunoeuflausino@gmail.com" method="post" class="contact__form">
+                    <div class="contact__inputs">
+                        <div class="contact__content">
+                            <input type="email" placeholder=" " class="contact__input">
+                            <label for="" class="contact__label">Email</label>
+                        </div>
+
+                        <div class="contact__content">
+                            <input type="text" placeholder=" " class="contact__input">
+                            <label for="" class="contact__label">Assunto</label>
+                        </div>
+
+                        <div class="contact__content contact__area">
+                            <textarea name="message" placeholder=" "  class="contact__input"></textarea>
+                            <label for="" class="contact__label">Mensagem</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="button button--flex">
+                        Enviar
+                        <i class="ri-arrow-right-up-line button__icon"></i>
+                    </button>
+                    <input type="hidden" name="_subject" value="Novo Contato!">
+                    <input type="text" name="_honey" style="display:none">
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
+            </div>
+        </section>
+
+
+    </main>
+
+
+    <footer class="footer section">
+        <div class="footer__container container grid">
+            <div class="footer__content">
+                <a href="#" class="footer__logo">
+                    <i class="ri-bubble-chart-fill footer__logo-icon"></i> Bruno Euflausino
+                </a>
+
+                
+
+
+            </div>
+            <div class="footer__content">
+                
+            </div>
+            <div class="footer__content">
+               
+        
         </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Entre em</p>
-      <h1 class="title">Contato</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/github.png"
-            alt="Github icon"
-            class="icon contact-icon"            
-          />
-          <p><a href="https://github.com/Euflausino">Github</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:brunoeuflausino@gmail.com">brunoeuflausino@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/bruno-euflausino-597b912a7/">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#experience">Experiência</a></li>
-            <li><a href="#projects">Projeto</a></li> 
-          </ul>
-        </div>
-      </nav>
-      <p class="hdr">Copyright &#169; 2024 Bruno Euflausino. All Rights Reserved.</p>
+        <p class="footer__copy">&#169; Bruno Euflausino. All rights reserved</p>
     </footer>
-    <script src="script.js"></script>
-  </body>
+
+
+    <!-- ===========SCROLL UP================= -->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
+    <!-- ===========SCROLL REVEAL============= -->
+    <script src="scrollreveal.min.js"></script>
+    <!-- ===========MAIN JS=================== -->
+    <script src="main.js"></script>
+</body>
+</html>
