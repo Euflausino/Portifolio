@@ -288,16 +288,16 @@ body.dark-theme{
     width: 200px;
     justify-self: center;
 }
-.vaga{
-    min-height: 100vh;
-}
+
 
 .home__title{
     color: var(--text-color);
     font-size: var(--big-font-size);
     line-height: 140%;
     margin-bottom: var(--mb-1);
+
 }
+
 
 .home__title span {
     color: var(--title-blue); 
@@ -432,44 +432,41 @@ transition: .3s;
 
 
 /* ===================PROJETOS================== */
-.card{
-    margin: 1px;
-    background-color: var(--body-color);
-    width: 400px;
-    height: 450px;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    color: var(--title-color);
-    text-align: center;
 
+
+
+.card-conteiner{
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
 }
-.card>h1{
-   font-size: 20px;
-   padding-top: 10px; 
+.card{
+    background-color: var(--body-color);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px var(--first-color);
 }
-.card>p{
-    font-size: 15px;
-    padding-top: 10px;
+.cards img{
+    max-width: 100%;
+    border-radius: 5px 5px 0 0;
 }
-.bnt{
-    font-size: 15px;
-    padding: 10px 50px;
-    border: none;
-    background-color: var(--first-color);
-    color: #dad9d8;
-    border-radius: 10px;
-    font-weight: 600;
-    transition: 0.5s background;
+.card-content{
+    padding: 20px;
+    text-align: center;
 }
-.bnt:hover{
-    transition: 0.5s background;
-    background-color: #910161;
+.card-content h2{
+    color: var(--title-color);
+    font-size: 28px;
+    margin-bottom: 6px;
 }
-.card>img{
-    width: 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+.card-content p{
+    color: var(--text-color);
+    line-height: 1.5;
 }
+
+
+
 
 .product__description{
     color: var(--text-color);
@@ -516,6 +513,10 @@ transition: .3s;
     margin-bottom: var(--mb-0-75);
     transition: .3s;
 }
+.bt{
+    justify-self: center;
+    position: relative;
+}
 
 .product__title,
 .product__price{
@@ -526,6 +527,7 @@ transition: .3s;
 
 .product__title{
     margin-bottom: .25rem;
+    text-align: center;
 }
 
 .product__button{
@@ -777,7 +779,7 @@ transition: .3s;
 
 /* PARA DISPOSITIVOS PEQUENOS */
 
-@media screen and (max-width:320px) {
+@media screen and (min-width:50px) {
     .container{
         margin-left: var(--mb-1);
         margin-right: var(--mb-1);
@@ -804,6 +806,10 @@ transition: .3s;
        height: 60px; 
     }
 
+    .card-conteiner{
+        grid-template-columns: 1fr;
+    }
+
 }
 
 /* PARA DISPOSITIVOS MEDIOS */
@@ -816,6 +822,9 @@ transition: .3s;
         grid-template-columns: repeat(2,170px);
         justify-content: center;
         column-gap: 5rem;
+    }
+    .card-conteiner{
+        grid-template-columns: 1fr;
     }
 
 }
@@ -866,6 +875,11 @@ transition: .3s;
     }
     .footer__container{
         column-gap: 3rem;
+    }
+
+
+    .card-conteiner{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -926,6 +940,16 @@ transition: .3s;
     .product__price{
         font-size: var(--normal-font-size);
     }
+
+
+
+
+
+
+
+
+
+
 
     .footer__logo{
         font-size: var(--h3-font-size);
