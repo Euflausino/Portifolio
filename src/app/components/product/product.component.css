@@ -1,0 +1,204 @@
+/* regras ccontainer, card, face, face1, face2, product__container, product__img etc. */
+
+.ccontainer{
+    width: 1000px;
+    position: relative;
+    display: grid;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    
+  }
+  
+  .ccontainer .card{
+    position: relative;
+  }
+  
+  .ccontainer .card .face{
+    width:300px;
+    height: 200px;
+    transition:.4s;
+    
+  }
+  
+  .ccontainer .card .face.face1{
+    position: relative;
+    background: var(--body-color);
+    display: flex;
+    justify-content: center;
+    align-content:center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+  }
+  
+  .ccontainer .card:hover .face.face1{
+    transform: translateY(0);
+    box-shadow:
+      inset 0 0 60px whitesmoke,
+      inset 20px 0 80px #f0f,
+      inset -20px 0 80px #0ff,
+      inset 20px 0 300px #f0f,
+      inset -20px 0 300px #0ff,
+      0 0 50px #fff,
+      -10px 0 80px #f0f,
+      10px 0 80px #0ff;
+     
+  }
+  
+  
+  .ccontainer .card .face.face1 .content{
+    opacity: .2;
+    transition:  0.5s;
+    text-align: center;
+    
+     
+    
+    
+   
+  
+  }
+  
+  .ccontainer .card:hover .face.face1 .content{
+    opacity: 1;
+   
+  }
+  
+  .ccontainer .card .face.face1 .content i{
+    font-size: 3em;
+    color: white;
+    display: inline-block;
+     
+  }
+  
+  .ccontainer .card .face.face1 .content h3{
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    
+  
+  }
+  
+  .ccontainer .card .face.face1 .content a{
+     transition: .5s;
+  }
+  
+  .ccontainer .card .face.face2{
+     position: relative;
+     background: var(--body-color);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0,0,0,.8);
+    transform: translateY(-100px);
+  }
+  
+  .ccontainer .card:hover .face.face2{
+      transform: translateY(0);
+  
+  
+  }
+  
+  .ccontainer .card .face.face2 .content p, a{
+    font-size: 10pt;
+    margin: 0 ;
+    padding: 0;
+    color:var(--title-color);
+  }
+  
+  .ccontainer .card .face.face2 .content a{ 
+    display: inline-block;
+    background-color: var(--first-color);
+    color: #fff;
+    padding: 1rem 1.75rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+    transition: .3s;      
+    padding: 10px;
+    margin: 15px 0 0;
+    display: inline-block;
+  }
+  
+  .ccontainer .card .face.face2 .content a:hover{
+    background: #830158 ;
+    color: white; 
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.product__description{
+    color: var(--text-color);
+    text-align: center;
+
+}
+.product__container{
+    display: flex;
+    padding: 3rem 0;
+    gap: 2.5rem 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+}
+
+.product__container1{
+    padding: 3rem 0;
+    gap: 2.5rem 3rem;
+   justify-content: center;
+}
+
+.product__img{
+    position: relative;
+    width: 120px;
+    justify-self: center;
+    margin-bottom: var(--mb-0-75);
+    transition: .3s;
+}
+
+.product__img1{
+    position: relative;
+    width: 120px;
+    justify-self: center;
+    margin-bottom: var(--mb-0-75);
+    transition: .3s;
+}
+
+.product__title,
+.product__price{
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+.product__title{
+    margin-bottom: .25rem;
+    text-align: center;
+}
+
+.product__button{
+    /* position: absolute; */
+    right: 0;
+    bottom: 0;
+    background-color: var(--title-blue);
+    color: #fff;
+    padding: .25rem;
+    border-radius: .35rem;
+    font-size: 1.15rem;
+    transition: .3s; 
+    justify-content: center;
+}
+
+.product__button:hover{
+    background-color: var(--first-color-alt);
+}
