@@ -1,0 +1,40 @@
+/* regras de .about__container, .about__img, .about__title, .about__details etc. */
+
+.about__container {
+    row-gap: 2rem;
+}
+
+.about__img{
+    width: 280px;
+    justify-self: center;
+    border-radius: 50%;
+}
+
+.about__title{  
+    margin-bottom: var(--mb-1);
+    color: var(--title-color);
+}
+
+.about__description{
+    color: var(--text-color);
+    margin-bottom: var(--mb-2);
+}
+
+.about__details{
+    display: grid;
+    row-gap: 1rem;
+    margin-bottom: var(--mb-2-5);
+}
+
+.about__details-description{
+    color: var(--text-color);
+    display: inline-flex;
+    column-gap: .5rem;
+    font-size: var(--small-font-size);
+}
+
+.about__details-icon {
+    font-size: 1rem;
+    color: var(--first-color);
+    margin-top: .15rem;
+}
