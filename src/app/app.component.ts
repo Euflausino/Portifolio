@@ -1,12 +1,26 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { FooterComponent } from './components/footer/footer.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ProductComponent } from './components/product/product.component';
+import { AboutComponent } from './components/about/about.component';
+import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  imports: [
+    HeaderComponent,
+    HomeComponent,
+    AboutComponent,
+    ProductComponent,
+    ContactComponent,
+    FooterComponent
+  ],
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  private sections: NodeListOf<HTMLElement> = null;
+  private sections: NodeListOf<HTMLElement> | null = null;
 
   ngOnInit(): void {
     this.sections = document.querySelectorAll('section[id]');
