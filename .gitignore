@@ -41,14 +41,3 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
-
-node_modules/
-dist/
-build/
-.env
-.next/
-.cache/
-.vscode/
-.idea/
-coverage/
-
