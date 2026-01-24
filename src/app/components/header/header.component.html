@@ -1,0 +1,35 @@
+<header class="header" id="header">
+  <nav class="nav container">
+    <a href="#" class="nav__logo">
+      <i class="ri-code-s-slash-line nav__logo-icon"></i>Bruno Euflausino
+    </a>
+
+    <div [class.show-menu]="showMenu" class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#home" class="nav__link" (click)="onNavLinkClick($event)">Início</a>
+        </li>
+        <li class="nav__item">
+          <a href="#about" class="nav__link" (click)="onNavLinkClick($event)">Sobre</a>
+        </li>
+        <li class="nav__item">
+          <a href="#project" class="nav__link" (click)="onNavLinkClick($event)">Projeto</a>
+        </li>
+        <li class="nav__item">
+          <a href="#contact" class="nav__link" (click)="onNavLinkClick($event)">Contatos</a>
+        </li>
+      </ul>
+
+      <div class="nav__close" (click)="closeMenu()" id="nav-close">
+        <i class="ri-close-line"></i>
+      </div>
+    </div>
+
+    <div class="nav__btns">
+      <i [ngClass]="themeIcon + ' change-theme'" id="theme-button" (click)="toggleTheme()"></i>
+      <div class="nav__toggle" id="nav-toggle" (click)="toggleMenu()">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+  </nav>
+</header>
