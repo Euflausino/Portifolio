@@ -20,8 +20,7 @@ export class EmailService {
 
     sendEmail(email: Email) {
         const headers = new HttpHeaders({
-        'Content-Type': 'application/json',
-        'X-API-KEY': `${environment.apiKey}`
+        'Content-Type': 'application/json'
         });
         return this.http.post(this.apiUrl, email, { headers });
     }

@@ -1,5 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:8080',
-  apiKey: 'PROD_API_KEY'
+  apiUrl: 'enviaemails-fphxdpc6b2hhedaq.mexicocentral-01.azurewebsites.net',
 };
