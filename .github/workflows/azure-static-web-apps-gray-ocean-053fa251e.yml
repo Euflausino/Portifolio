@@ -37,6 +37,8 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           app_location: "/"
           output_location: "dist/projeto"
+    env:
+     NODE_VERSION: "20.19.0"
           
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
