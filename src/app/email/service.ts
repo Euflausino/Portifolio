@@ -22,6 +22,6 @@ export class EmailService {
         const headers = new HttpHeaders({
         'Content-Type': 'application/json'
         });
-        return this.http.post(this.apiUrl, email, { headers });
+        return this.http.post<void>(this.apiUrl, email, { headers });
     }
 }
