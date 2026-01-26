@@ -1,3 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'enviamail-cbfzdmeretcmeth5.canadacentral-01.azurewebsites.net'};
+  apiUrl: 'https://enviamail-cbfzdmeretcmeth5.canadacentral-01.azurewebsites.net'
+};
