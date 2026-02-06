@@ -1,0 +1,153 @@
+<section
+  id="contato"
+  class="min-h-screen flex items-center justify-center
+         bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950
+         px-6"
+  data-aos="fade-up"
+>
+  <div
+    class="max-w-7xl w-full
+           grid grid-cols-1 lg:grid-cols-2
+           gap-12 items-center"
+  >
+
+    <!-- INFO / SOCIAIS -->
+    <div class="space-y-8 text-center lg:text-left" data-aos="fade-right">
+      <h2 class="text-4xl font-bold text-slate-100">
+        <span class="text-sky-400">Contato</span>
+      </h2>
+
+      <div>
+        <h3 class="text-xl font-semibold text-slate-200 mb-3">
+          Sociais:
+        </h3>
+
+        <ul class="space-y-3 text-slate-300 pl-4">
+          <li>
+            <a
+              href="https://github.com/Euflausino"
+              target="_blank"
+              class="hover:text-sky-400 transition flex justify-center lg:justify-start gap-2"
+              data-aos="fade-up" data-aos-delay="200"
+            >
+              ▹ GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/bruno-euflausino-597b912a7/"
+              target="_blank"
+              class="hover:text-sky-400 transition flex justify-center lg:justify-start gap-2"
+              data-aos="fade-up" data-aos-delay="300"
+            >
+                ▹ LinkedIn
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/obrunoeuflausino/"
+              target="_blank"
+              class="hover:text-sky-400 transition flex justify-center lg:justify-start gap-2"
+              data-aos="fade-up" data-aos-delay="400"
+            >
+              ▹ Instagram
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="text-slate-400" data-aos="fade-up" data-aos-delay="250">
+        <p class="mb-2">Envie uma mensagem para meu email:</p>
+        <p class="text-sky-400 font-medium">
+          brunoeuflausino@gmail.com
+        </p>
+      </div>
+    </div>
+
+    <!-- FORMULÁRIO -->
+    <div
+      class="bg-slate-900/70 border border-slate-800
+             rounded-xl p-8 backdrop-blur
+             shadow-xl"
+      data-aos="fade-left"
+      data-aos-delay="200"
+    >
+      <form class="space-y-6" (ngSubmit)="send()">
+
+        <!-- EMAIL -->
+        <div data-aos="zoom-in" data-aos-delay="200">
+          <label class="block text-slate-300 mb-1" >
+            Seu email
+          </label>
+          <input
+            type="email"
+            required
+            placeholder="exemplo@email.com"
+            class="w-full px-4 py-3 rounded-lg
+                   bg-slate-950 border border-slate-700
+                   text-slate-200
+                   focus:outline-none focus:ring-2
+                   focus:ring-sky-400"
+            [(ngModel)]="email.email"
+            name="email"
+            required
+          />
+        </div>
+
+        <!-- ASSUNTO -->
+        <div data-aos="zoom-in" data-aos-delay="400">
+          <label class="block text-slate-300 mb-1">
+            Assunto
+          </label>
+          <input
+            type="text"
+            required
+            placeholder="Vamos conversar!"
+            class="w-full px-4 py-3 rounded-lg
+                   bg-slate-950 border border-slate-700
+                   text-slate-200
+                   focus:outline-none focus:ring-2
+                   focus:ring-sky-400"
+            [(ngModel)]="email.assunto" 
+            name="assunto"
+            required
+          />
+        </div>
+
+        <!-- MENSAGEM -->
+        <div data-aos="zoom-in" data-aos-delay="600">
+          <label class="block text-slate-300 mb-1">
+            Mensagem
+          </label>
+          <textarea
+            rows="5"
+            required
+            placeholder="Escreva sua mensagem aqui..."
+            class="w-full px-4 py-3 rounded-lg
+                   bg-slate-950 border border-slate-700
+                   text-slate-200 resize-none
+                   focus:outline-none focus:ring-2
+                   focus:ring-sky-400"
+            [(ngModel)]="email.mensagem" 
+            name="mensagem"
+            required       
+          ></textarea>
+        </div>
+
+        <!-- BOTÃO -->
+        <button
+          type="submit"
+          class="w-full py-3 rounded-lg font-semibold
+                 bg-sky-400 text-slate-900
+                 hover:bg-sky-300
+                 transition
+                 shadow-lg shadow-sky-400/30"
+          data-aos="zoom-in" data-aos-delay="800"
+        >
+          Enviar mensagem
+        </button>
+      </form>
+    </div>
+
+  </div>
+</section>
