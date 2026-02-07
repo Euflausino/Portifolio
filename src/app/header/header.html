@@ -56,19 +56,19 @@
     class="md:hidden flex flex-col bg-slate-950 border-t border-slate-800 px-6 py-4"
   >
     <a
-      href="#sobre"
+      href="#home"
+      class="py-2 text-slate-300 hover:text-sky-400"
+      (click)="toggleMenu()"
+    >
+      Home
+    </a>
+
+    <a
+      href="#about"
       class="py-2 text-slate-300 hover:text-sky-400"
       (click)="toggleMenu()"
     >
       Sobre
-    </a>
-
-    <a
-      href="#stack"
-      class="py-2 text-slate-300 hover:text-sky-400"
-      (click)="toggleMenu()"
-    >
-      Stack
     </a>
 
     <a
