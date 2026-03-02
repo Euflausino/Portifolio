@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiUrl: 'https://nememailapi.onrender.com'
+  apiUrl: 'nememailapi-production.up.railway.app'
 };
