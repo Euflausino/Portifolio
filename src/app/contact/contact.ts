@@ -17,10 +17,8 @@ export class Contact {
   constructor(private emailService: EmailService) { }
   
   private validateForm(): boolean {
-    return this.email.email.trim() !== '' && 
-           this.isValidEmail(this.email.email) &&
-           this.email.assunto.trim() !== '' && 
-           this.email.mensagem.trim() !== '';
+    return this.email.assunto.trim() !== '' && 
+          this.email.mensagem.trim() !== '';
   }
   
   send(): void {
