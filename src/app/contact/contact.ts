@@ -16,30 +16,22 @@ export class Contact {
   
   constructor(private emailService: EmailService) { }
   
+  private validateForm(): boolean {
+    return this.email.email.trim() !== '' && 
+           this.isValidEmail(this.email.email) &&
+           this.email.assunto.trim() !== '' && 
+           this.email.mensagem.trim() !== '';
+  }
+  
   send(): void {
     if (!this.validateForm()) {
       this.message = 'Campos inválidos ou não preenchidos!';
       return;
     }
-    this.emailService.sendEmail(this.email).subscribe({
-      next:() => {
-        alert('Email enviado com sucesso!');
-        return;
-      },
-      error: (error) => {
-        alert('Erro ao enviar email. Tente novamente.');
-        console.error('Erro:', error);
-        return;
-      }
-    });
+    // launch mail client via mailto link
+    this.emailService.sendEmail(this.email);
+    alert('Abrindo seu cliente de e‑mail. Complete e envie a mensagem.');
     this.resetForm();
-  }
-
-  private validateForm(): boolean {
-    return this.email.email.trim() !== '' && 
-            this.isValidEmail(this.email.email) &&
-           this.email.assunto.trim() !== '' && 
-           this.email.mensagem.trim() !== '';
   }
 
   private isValidEmail(value: string): boolean {

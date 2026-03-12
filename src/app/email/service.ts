@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { environment } from '../../environments/environment';
+import { of } from 'rxjs';
 
 export interface Email{
     email: string;
@@ -14,14 +13,18 @@ export interface Email{
 
 export class EmailService {
 
-    private apiUrl = `${environment.apiUrl}/email`;
-
-    constructor(private http: HttpClient) { }
+    constructor() { }
 
     sendEmail(email: Email) {
-        const headers = new HttpHeaders({
-        'Content-Type': 'application/json'
-        });
-        return this.http.post<void>(this.apiUrl, email, { headers });
+        // no backend API available anymore; use mailto link
+        const to = encodeURIComponent("brunoeuflausino@gmail.com");
+        const subject = encodeURIComponent(email.assunto);
+        const body = encodeURIComponent(email.mensagem);
+        const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
+        // open default mail client
+        window.location.href = mailto;
+        // return an observable for compatibility with existing callers
+        // using rxjs `of` to emit a void value immediately
+        return of<void>(undefined);
     }
 }
