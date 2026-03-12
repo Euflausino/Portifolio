@@ -1,14 +1,17 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
 import { App } from './app/app';
-import AOS from 'aos';
-
-import 'aos/dist/aos.css';
-
-AOS.init({
-  duration: 900,
-  once: true,
-});
+// only load Aos on the client side (Angular Universal / Vercel SSR)
+if (typeof window !== 'undefined') {
+  // dynamic import keeps it out of the server bundle
+  import('aos').then(({ default: AOS }) => {
+    import('aos/dist/aos.css');
+    AOS.init({
+      duration: 900,
+      once: true,
+    });
+  });
+}
 
 
 bootstrapApplication(App, appConfig)
