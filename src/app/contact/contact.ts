@@ -18,7 +18,7 @@ export class Contact {
   
   private validateForm(): boolean {
     return this.email.assunto.trim() !== '' && 
-          this.email.mensagem.trim() !== '';
+           this.email.mensagem.trim() !== '';
   }
   
   send(): void {
@@ -30,11 +30,6 @@ export class Contact {
     this.emailService.sendEmail(this.email);
     alert('Abrindo seu cliente de e‑mail. Complete e envie a mensagem.');
     this.resetForm();
-  }
-
-  private isValidEmail(value: string): boolean {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(value);
   }
 
   private resetForm(): void {
