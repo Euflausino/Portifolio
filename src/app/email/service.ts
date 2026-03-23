@@ -22,7 +22,8 @@ export class EmailService {
         const body = encodeURIComponent(email.mensagem);
         const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
         // open default mail client
-        window.location.href = mailto;
+        // window.location.href = mailto;
+        window.open(mailto, '_self');
         // return an observable for compatibility with existing callers
         // using rxjs `of` to emit a void value immediately
         return of<void>(undefined);
